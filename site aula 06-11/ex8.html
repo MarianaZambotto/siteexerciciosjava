@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <h1> Exercício 8 - Tabuada</h1>
+    <script>
+        function executarExercicio() {
+           
+            var numero = Number(prompt("Por favor, digite um número para ver sua tabuada:"));
+           
+           
+            var tabuada = "Tabuada do " + numero + ":<br><br>";
+           
+           
+            for (var i = 1; i <= 10; i++) {
+                var resultado = numero * i;
+                tabuada += numero + " x " + i + " = " + resultado + "<br>";
+            }
+           
+           
+            document.getElementById("resultado").innerHTML = "<strong>" + tabuada + "</strong>";
+        }
+       
+       
+        executarExercicio();
+    </script>
+</body>
+</html>

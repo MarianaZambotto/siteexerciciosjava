@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <h1> Exercício 10 - Objeto de Pessoa</h1>
+    <script>
+        function executarExercicio() {
+           
+            var nome = prompt("Por favor, digite seu nome:");
+            var idade = prompt("Por favor, digite sua idade:");
+            var cidade = prompt("Por favor, digite sua cidade:");
+           
+           
+            var pessoa = {
+                nome: nome,
+                idade: idade,
+                cidade: cidade
+            };
+           
+           
+            var resultadoDiv = document.getElementById("resultado");
+            var mensagem = "<strong>Informações da Pessoa:</strong><br><br>";
+            mensagem += "<div class='info-item'><strong>Nome:</strong> " + pessoa.nome + "</div>";
+            mensagem += "<div class='info-item'><strong>Idade:</strong> " + pessoa.idade + " anos</div>";
+            mensagem += "<div class='info-item'><strong>Cidade:</strong> " + pessoa.cidade + "</div>";
+           
+            resultadoDiv.innerHTML = mensagem;
+        }
+       
+       
+        executarExercicio();
+    </script>
+</body>
+</html>
