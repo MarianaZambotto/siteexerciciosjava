@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Exercício 6 - Média de Notas</h1>
+    <div id="resultado"></div>
+    <script>
+    function executarExercicio() {
+           
+            var nota1 = Number(prompt("Por favor, digite a primeira nota:"));
+            var nota2 = Number(prompt("Por favor, digite a segunda nota:"));
+            var nota3 = Number(prompt("Por favor, digite a terceira nota:"));
+           
+           
+            var media = (nota1 + nota2 + nota3) / 3;
+           
+           
+            var mensagem;
+            var classe;
+           
+            if (media > 6) {
+                mensagem = "Aprovado!";
+                classe = "aprovado";
+            } else if (media < 6) {
+                mensagem = "Reprovado!";
+                classe = "reprovado";
+            } else {
+                mensagem = "Recuperação!";
+                classe = "recuperacao";
+            }
+           
+           
+            var resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = "<strong class='" + classe + "'>" + mensagem + "</strong><br>" +
+                                     "Nota 1: " + nota1 + "<br>" +
+                                     "Nota 2: " + nota2 + "<br>" +
+                                     "Nota 3: " + nota3 + "<br>" +
+                                     "Média: " + media.toFixed(2);
+            resultadoDiv.className = "result " + classe;
+        }
+       
+       
+        executarExercicio();
+        </script>
+    <div class="btn-voltar-container">
+        <a href="index.html" class="btn-voltar">← Voltar para os Exercícios</a>
+    </div>
+
+   <a href="index.html">Voltar ao Menu</a>
+
+</body>
+</html>

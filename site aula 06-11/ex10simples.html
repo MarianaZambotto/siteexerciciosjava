@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+<body>
+    <h1>ex10</h1>
+    <h2 id="mensagem"></h2>
+
+    <script>
+
+        let nome = prompt("Insira seu nome: ")
+        let idade = prompt("Insira sua idade: ")
+        let cidade = prompt("Insira sua cidade: ")
+        let pessoa = {
+            nome: nome,
+            idade: idade,
+            cidade: cidade
+        };
+        document.getElementById('mensagem').innerHTML = `Olá! ${pessoa.nome}, você tem ${pessoa.idade} anos e mora em ${pessoa.cidade}.`
+
+    </script>
+ <a href="index.html">Voltar ao Menu</a>
+</body>
+</html>
